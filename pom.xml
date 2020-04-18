@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -7,21 +8,21 @@
 		<version>7</version>
 	</parent>
 
-	<groupId>de.grundid.opendatalab</groupId>
+	<groupId>com.hxgis</groupId>
 	<artifactId>geojson-jackson</artifactId>
 	<version>1.15-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 
-	<name>GeoJson POJOs for Jackson </name>
+	<name>GeoJson POJOs for Jackson</name>
 	<url>https://github.com/opendatalab-de/geojson-jackson</url>
 	<description>A collection of Java POJOs for GeoJson</description>
 
 	<scm>
-		<connection>scm:git:git://github.com/opendatalab-de/geojson-jackson.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:/opendatalab-de/geojson-jackson.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<connection>scm:git:git://github.com/xyzjl/geojson-jackson.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:/xyzjl/geojson-jackson.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<licenses>
 		<license>
@@ -37,6 +38,12 @@
 			<email>as@nfctools.org</email>
 			<organization>GrundID GmbH</organization>
 			<organizationUrl>http://www.grundid.de</organizationUrl>
+		</developer>
+		<developer>
+			<name>xyz_jl</name>
+			<email>xyz_jl@163.com</email>
+			<organization>Hxlc</organization>
+			<organizationUrl>http://www.hxgis.com</organizationUrl>
 		</developer>
 	</developers>
 
