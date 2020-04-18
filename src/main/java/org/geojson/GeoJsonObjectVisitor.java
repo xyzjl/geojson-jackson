@@ -1,5 +1,10 @@
 package org.geojson;
 
+import org.geojson.topojson.TopoLineString;
+import org.geojson.topojson.TopoPolygon;
+import org.geojson.topojson.TopoPoint;
+import org.geojson.topojson.Topology;
+
 /**
  * Visitor to handle all different types of {@link GeoJsonObject}.
  * 
@@ -25,6 +30,14 @@ public interface GeoJsonObjectVisitor<T> {
 	T visit(MultiPoint geoJsonObject);
 
 	T visit(LineString geoJsonObject);
+
+	T visit(Topology geoJsonObject);
+
+	T visit(TopoPolygon geoJsonObject);
+
+	T visit(TopoPoint geoJsonObject);
+
+	T visit(TopoLineString geoJsonObject);
 
 	/**
 	 * An abstract adapter class for visiting GeoJson objects.
@@ -77,6 +90,26 @@ public interface GeoJsonObjectVisitor<T> {
 
 		@Override
 		public T visit(LineString geoJsonObject) {
+			return null;
+		}
+
+		@Override
+		public T visit(Topology geoJsonObject) {
+			return null;
+		}
+
+		@Override
+		public T visit(TopoPolygon geoJsonObject) {
+			return null;
+		}
+
+		@Override
+		public T visit(TopoPoint geoJsonObject) {
+			return null;
+		}
+
+		@Override
+		public T visit(TopoLineString geoJsonObject) {
 			return null;
 		}
 	}

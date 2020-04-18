@@ -1,5 +1,9 @@
 package org.geojson;
 
+import org.geojson.topojson.TopoLineString;
+import org.geojson.topojson.TopoPoint;
+import org.geojson.topojson.TopoPolygon;
+import org.geojson.topojson.Topology;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +11,7 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 @RunWith(Parameterized.class)
 public class GeoJsonObjectVisitorTest {
@@ -67,6 +72,30 @@ public class GeoJsonObjectVisitorTest {
 			Assert.assertEquals(LineString.class, geoJsonObject.getClass());
 			return geoJsonObject;
 		}
+
+		@Override
+		public GeoJsonObject visit(Topology geoJsonObject) {
+			Assert.assertEquals(Topology.class, geoJsonObject.getClass());
+			return geoJsonObject;
+		}
+
+		@Override
+		public GeoJsonObject visit(TopoPolygon geoJsonObject) {
+			Assert.assertEquals(TopoPolygon.class, geoJsonObject.getClass());
+			return geoJsonObject;
+		}
+
+		@Override
+		public GeoJsonObject visit(TopoPoint geoJsonObject) {
+			Assert.assertEquals(TopoPoint.class, geoJsonObject.getClass());
+			return geoJsonObject;
+		}
+
+		@Override
+		public GeoJsonObject visit(TopoLineString geoJsonObject) {
+			Assert.assertEquals(TopoLineString.class, geoJsonObject.getClass());
+			return geoJsonObject;
+		}
 	};
 	public GeoJsonObjectVisitorTest(GeoJsonObject geoJsonObject) {
 		this.geoJsonObject = geoJsonObject;
@@ -76,7 +105,7 @@ public class GeoJsonObjectVisitorTest {
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] { { new GeometryCollection() }, { new FeatureCollection() },
 				{ new Point(12D, 13D) }, { new Feature() },
-				{ new MultiLineString(Arrays.asList(new LngLatAlt(12D, 13D))) }, { new Polygon() },
+				{ new MultiLineString(Collections.singletonList(new LngLatAlt(12D, 13D))) }, { new Polygon() },
 				{ new MultiPolygon() }, { new MultiPoint() }, { new LineString() } });
 	}
 
