@@ -1,13 +1,9 @@
 package org.geojson.topojson;
 
 import org.geojson.GeoJsonObjectVisitor;
-import org.geojson.GeoJsonObjectWithProperties;
 import org.geojson.LngLatAlt;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class TopoPoint extends GeoJsonObjectWithProperties {
+public class TopoPoint extends TopoJsonObjectWithProperties {
     private LngLatAlt coordinates;
 
     public LngLatAlt getCoordinates() {

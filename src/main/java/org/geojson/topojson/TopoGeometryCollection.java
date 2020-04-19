@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TopoGeometryCollection extends TopojsonObject {
-    private List<TopojsonObject> geometries = new ArrayList<>();
+    private List<TopoJsonObjectWithProperties> geometries = new ArrayList<>();
 
-    public List<TopojsonObject> getGeometries() {
+    public List<TopoJsonObjectWithProperties> getGeometries() {
         return geometries;
     }
 
-    public void setGeometries(List<TopojsonObject> geometries) {
+    public void setGeometries(List<TopoJsonObjectWithProperties> geometries) {
         this.geometries = geometries;
     }
 

@@ -1,11 +1,13 @@
-package org.geojson;
+package org.geojson.topojson;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.geojson.GeoJsonObject;
+import org.geojson.GeojsonObjectProperties;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class GeoJsonObjectWithProperties extends GeoJsonObject implements GeojsonObjectProperties {
+public abstract class TopoJsonObjectWithProperties extends TopojsonObject implements GeojsonObjectProperties {
 
     @JsonInclude(JsonInclude.Include.ALWAYS)
     protected Map<String, Object> properties = new HashMap<>();

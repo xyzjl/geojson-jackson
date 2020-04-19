@@ -1,10 +1,8 @@
 package org.geojson.topojson;
 
-import org.geojson.GeoJsonObjectWithProperties;
-
 import java.util.List;
 
-public abstract class TopoGeometry<T> extends GeoJsonObjectWithProperties {
+public abstract class TopoGeometry<T> extends TopoJsonObjectWithProperties {
     private List<T> arcs;
 
     public List<T> getArcs() {
