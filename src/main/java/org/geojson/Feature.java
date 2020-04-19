@@ -2,33 +2,11 @@ package org.geojson;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import java.util.HashMap;
-import java.util.Map;
+public class Feature extends GeoJsonObjectWithProperties {
 
-public class Feature extends GeoJsonObject {
-
-	@JsonInclude(JsonInclude.Include.ALWAYS)
-	private Map<String, Object> properties = new HashMap<String, Object>();
 	@JsonInclude(JsonInclude.Include.ALWAYS)
 	private GeoJsonObject geometry;
 	private String id;
-
-	public void setProperty(String key, Object value) {
-		properties.put(key, value);
-	}
-
-	@SuppressWarnings("unchecked")
-	public <T> T getProperty(String key) {
-		return (T)properties.get(key);
-	}
-
-	public Map<String, Object> getProperties() {
-		return properties;
-	}
-
-	public void setProperties(Map<String, Object> properties) {
-		this.properties = properties;
-	}
 
 	public GeoJsonObject getGeometry() {
 		return geometry;

@@ -1,19 +1,18 @@
 package org.geojson.topojson;
 
-import org.geojson.GeoJsonObject;
 import org.geojson.GeoJsonObjectVisitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TopoGeometryCollection extends TopojsonObject {
-    private List<GeoJsonObject> geometries = new ArrayList<>();
+    private List<TopojsonObject> geometries = new ArrayList<>();
 
-    public List<GeoJsonObject> getGeometries() {
+    public List<TopojsonObject> getGeometries() {
         return geometries;
     }
 
-    public void setGeometries(List<GeoJsonObject> geometries) {
+    public void setGeometries(List<TopojsonObject> geometries) {
         this.geometries = geometries;
     }
 
